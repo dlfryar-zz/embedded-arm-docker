@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  ts7600_dev:
+      command: ['/bin/bash']
+      image: ts7600_dev
+      build:
+        context: .
+        labels:
+          com.embeddedarm.description: "Build enviroment Technologic Systems embeddedarm.com"
+        dockerfile: Dockerfile.ts7600

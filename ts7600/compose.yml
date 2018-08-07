@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  ts7600_dev:
+    command: ['/root/Config/build.sh']
+    env_file:
+      - ../.env
+    volumes:
+      - "../ts7600/:/root/Config"
+      - "../creds:/root/Creds"
+      - "../share:/root/Share"
+    container_name: ts7600_dev
